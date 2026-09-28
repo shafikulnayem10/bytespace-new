@@ -3,6 +3,7 @@ import BrandLogos from "@/components/sections/BrandLogos";
 import CourseCategories from "@/components/sections/CourseCategories";
 import Hero from "@/components/sections/Hero";
 import Courses from "@/components/sections/Courses";
+import LearningPaths from "@/components/sections/LearningPaths";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
         <BrandLogos />
         <CourseCategories />
         <Courses></Courses>
+        <LearningPaths></LearningPaths>
       </main>
     </>
   );
