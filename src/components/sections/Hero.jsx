@@ -2,12 +2,12 @@ import Image from "next/image";
 import Button from "@/components/ui/Button";
 
 const shapes = [
-  { src: "spiral-left.png", w: 260, h: 330, cls: "left-[-60px] top-[110px] w-[150px] md:left-[-30px] md:top-[130px] md:w-[260px]" },
-  { src: "squiggle.png", w: 90, h: 120, cls: "left-[8%] top-[330px] hidden w-[70px] md:block lg:left-[12%] lg:w-[90px]" },
-  { src: "ring.png", w: 230, h: 230, cls: "bottom-[20px] left-[3%] hidden w-[150px] md:block lg:left-[6%] lg:w-[230px]" },
-  { src: "cone.png", w: 140, h: 150, cls: "right-[12%] top-[290px] hidden w-[100px] md:block lg:w-[140px]" },
-  { src: "spiral-right.png", w: 200, h: 250, cls: "bottom-[40px] right-[2%] hidden w-[130px] md:block lg:w-[200px]" },
-  { src: "cylinder.png", w: 220, h: 300, cls: "right-[-60px] top-[100px] w-[130px] md:right-[-20px] md:w-[220px]" },
+  { src: "spiral-left.png", w: 385, h: 385, cls: "left-[-60px] top-[110px] w-[150px] md:left-[-30px] md:top-[130px] md:w-[260px]" },
+  { src: "squiggle.png", w: 175, h: 175, cls: "left-[8%] top-[350px] hidden w-[70px] md:block lg:left-[12%] lg:w-[90px]" },
+  { src: "ring.png", w: 342, h: 342, cls: "bottom-[20px] left-[3%] hidden w-[150px] md:block lg:left-[6%] lg:w-[230px]" },
+  { src: "cone.png", w: 188, h: 188, cls: "right-[12%] top-[290px] hidden w-[100px] md:block lg:w-[140px]" },
+  { src: "spiral-right.png", w: 330, h: 330, cls: "bottom-[40px] right-[2%] hidden w-[130px] md:block lg:w-[200px]" },
+  { src: "cylinder.png", w: 370, h: 370, cls: "right-[-60px] top-[100px] w-[130px] md:right-[-20px] md:w-[220px]" },
 ];
 
 export default function Hero() {
@@ -24,7 +24,7 @@ export default function Hero() {
         }}
       />
 
-      {/* decorative 3D shapes */}
+      {/* 3D shapes */}
       {shapes.map((s) => (
         <Image
           key={s.src}
@@ -66,14 +66,14 @@ export default function Hero() {
           <Image
             src="/images/hero-person.png"
             alt="Smiling student holding a laptop"
-            width={520}
-            height={520}
+            width={578}
+            height={541}
             priority
             className="absolute bottom-0 left-1/2 h-full w-auto -translate-x-1/2 object-contain"
           />
 
           {/* UI/UX Design card */}
-          <div className="absolute left-0 top-6 hidden rounded-xl bg-white p-3 text-left text-neutral-950 shadow-lg md:block">
+          <div className="absolute left-0 top-6 hidden w-[208px] h-[70px] rounded-xl bg-white p-3 text-left text-neutral-950 shadow-lg md:block">
             <p className="font-heading text-body-s font-semibold">UI/UX Design</p>
             <p className="mt-0.5 text-body-xs text-neutral-500">
               300 Courses &bull; 1000+ Students
@@ -81,7 +81,7 @@ export default function Hero() {
           </div>
 
           {/* Learning Progress card */}
-          <div className="absolute right-0 top-0 w-[150px] rounded-xl bg-white p-3 text-left text-neutral-950 shadow-lg md:w-[210px] md:p-4">
+          <div className="absolute right-0 top-0 w-[232px] h-[131px] rounded-xl bg-white p-3 text-left text-neutral-950 shadow-lg md:w-[210px] md:p-4">
             <p className="text-body-xs text-neutral-500">Learning Progress</p>
             <p className="mt-1 font-heading text-[28px] font-semibold leading-none md:text-heading-s">
               55%

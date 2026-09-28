@@ -15,7 +15,7 @@ export default function Navbar() {
 
   return (
     <header className="absolute inset-x-0 top-0 z-20 text-white">
-      <nav className="mx-auto flex max-w-[1200px] items-center justify-between px-4 py-6 md:px-8 xl:px-0">
+      <nav className="mx-auto flex h-[120px] w-[1440px] max-w-full items-center justify-between px-4 md:h-[80px] md:px-8">
         <Link href="/" aria-label="ByteSpace home">
           <Image src="/images/logo.svg" alt="ByteSpace" width={120} height={32} priority />
         </Link>
@@ -45,7 +45,7 @@ export default function Navbar() {
             Join Us
           </Link>
           <button aria-label="Cart" className="cursor-pointer">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
               <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
               <path d="M3 6h18" />
               <path d="M16 10a4 4 0 0 1-8 0" />
@@ -60,7 +60,7 @@ export default function Navbar() {
           aria-label="Toggle menu"
           aria-expanded={open}
         >
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
             {open ? <path d="M6 6l12 12M18 6L6 18" /> : <path d="M4 7h16M4 12h16M4 17h16" />}
           </svg>
         </button>
