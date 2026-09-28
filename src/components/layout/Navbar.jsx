@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { ShoppingCart, Menu, X } from "lucide-react";
 
 const links = [
   { label: "Home", href: "/" },
@@ -45,11 +46,7 @@ export default function Navbar() {
             Join Us
           </Link>
           <button aria-label="Cart" className="cursor-pointer">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
-              <path d="M3 6h18" />
-              <path d="M16 10a4 4 0 0 1-8 0" />
-            </svg>
+            <ShoppingCart className="size-6" strokeWidth={2} />
           </button>
         </div>
 
@@ -60,9 +57,11 @@ export default function Navbar() {
           aria-label="Toggle menu"
           aria-expanded={open}
         >
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-            {open ? <path d="M6 6l12 12M18 6L6 18" /> : <path d="M4 7h16M4 12h16M4 17h16" />}
-          </svg>
+          {open ? (
+            <X className="size-6" strokeWidth={2} />
+          ) : (
+            <Menu className="size-6" strokeWidth={2} />
+          )}
         </button>
       </nav>
 
