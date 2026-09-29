@@ -1,8 +1,8 @@
 import { Poppins } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
-import Navbar from "@/components/layout/Navbar";
-import Footer from "@/components/layout/Footer";
+
+
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -29,9 +29,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${poppins.variable} ${satoshi.variable}`}>
       <body className="font-body text-neutral-950 antialiased">
-        <Navbar></Navbar>
+       
         {children}
-        <Footer></Footer>
+       
         </body>
     </html>
   );

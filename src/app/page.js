@@ -7,11 +7,12 @@ import LearningPaths from "@/components/sections/LearningPaths";
 import GrowthPaths from "@/components/sections/GrowthPaths";
 import CreatorCTA from "@/components/sections/CreatorCTA";
 import Testimonials from "@/components/sections/Testimonials";
+import Footer from "@/components/layout/Footer";
 
 export default function Home() {
   return (
     <>
-    
+     <Navbar></Navbar>
       <main>
         <Hero />
         <BrandLogos />
@@ -21,6 +22,7 @@ export default function Home() {
         <GrowthPaths></GrowthPaths>
         <CreatorCTA></CreatorCTA>
         <Testimonials></Testimonials>
+        <Footer></Footer>
       </main>
     </>
   );
