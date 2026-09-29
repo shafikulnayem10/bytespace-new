@@ -1,0 +1,17 @@
+import AuthLayout from "@/components/auth/AuthLayout";
+import LoginForm from "@/components/auth/LoginForm";
+
+export const metadata = {
+  title: "Sign In | ByteSpace",
+};
+
+export default function LoginPage() {
+  return (
+    <AuthLayout
+      heading="Sign in with ease"
+      description="Experience a seamless and efficient sign-in process that grants you instant access to a world of knowledge."
+    >
+      <LoginForm />
+    </AuthLayout>
+  );
+}
