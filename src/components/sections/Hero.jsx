@@ -2,12 +2,12 @@ import Image from "next/image";
 import Button from "@/components/ui/Button";
 
 const shapes = [
-  { src: "spiral-left.png", w: 385, h: 385, cls: "left-[-60px] top-[110px] w-[150px] md:left-[-30px] md:top-[130px] md:w-[260px]" },
-  { src: "squiggle.png", w: 175, h: 175, cls: "left-[8%] top-[350px] hidden w-[70px] md:block lg:left-[12%] lg:w-[90px]" },
-  { src: "ring.png", w: 342, h: 342, cls: "bottom-[20px] left-[3%] hidden w-[150px] md:block lg:left-[6%] lg:w-[230px]" },
-  { src: "cone.png", w: 188, h: 188, cls: "right-[12%] top-[290px] hidden w-[100px] md:block lg:w-[140px]" },
-  { src: "spiral-right.png", w: 330, h: 330, cls: "bottom-[40px] right-[2%] hidden w-[130px] md:block lg:w-[200px]" },
-  { src: "cylinder.png", w: 370, h: 370, cls: "right-[-60px] top-[100px] w-[130px] md:right-[-20px] md:w-[220px]" },
+  { src: "spiral-left.png", w: 385, h: 385, mobileW: 150, pos: "left-[-60px] top-[110px] md:left-[-30px] md:top-[130px]" },
+  { src: "squiggle.png", w: 175, h: 175, mobileW: 0, pos: "left-[8%] top-[350px] hidden md:block lg:left-[12%]" },
+  { src: "ring.png", w: 342, h: 342, mobileW: 0, pos: "bottom-[20px] left-[3%] hidden md:block lg:left-[6%]" },
+  { src: "cone.png", w: 188, h: 188, mobileW: 0, pos: "right-[12%] top-[290px] hidden md:block" },
+  { src: "spiral-right.png", w: 330, h: 330, mobileW: 0, pos: "bottom-[40px] right-[2%] hidden md:block" },
+  { src: "cylinder.png", w: 370, h: 370, mobileW: 130, pos: "right-[-60px] top-[100px] md:right-[-20px]" },
 ];
 
 export default function Hero() {
@@ -33,7 +33,10 @@ export default function Hero() {
           aria-hidden
           width={s.w}
           height={s.h}
-          className={`pointer-events-none absolute h-auto select-none ${s.cls}`}
+          className={`pointer-events-none absolute h-auto select-none ${s.pos}`}
+          style={{
+            width: `clamp(${s.mobileW || s.w}px, 18vw, ${s.w}px)`,
+          }}
         />
       ))}
 
@@ -59,7 +62,7 @@ export default function Hero() {
           <Button type="submit">Search</Button>
         </form>
 
-        {/* hero person , circle , floating cards part */}
+        {/* hero person, circle, floating cards */}
         <div className="relative mt-12 h-[300px] w-full max-w-[720px] md:h-[420px]">
           <div className="absolute bottom-0 left-1/2 h-[560px] w-[560px] -translate-x-1/2 translate-y-1/2 rounded-full bg-secondary-500 md:h-[720px] md:w-[720px]" />
 
@@ -92,13 +95,12 @@ export default function Hero() {
           </div>
 
           {/* Happy Students card */}
-          <div className="absolute bottom-6 left-0 hidden rounded-xl   shadow-lg md:block">
-            
+          <div className="absolute bottom-6 left-0 hidden rounded-xl shadow-lg md:block">
             <Image
               src="/images/hero/avatars-2k.png"
               alt="Students"
               width={200}
-            height={45} 
+              height={45}
             />
           </div>
         </div>
