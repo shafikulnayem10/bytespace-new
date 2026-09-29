@@ -42,7 +42,7 @@ export default function Navbar() {
           <Link href="/login" className="text-body-s hover:text-secondary-500">
             Sign In
           </Link>
-          <Link href="/register" className="text-body-s hover:text-secondary-500">
+          <Link href="/signup" className="text-body-s hover:text-secondary-500">
             Join Us
           </Link>
           <button aria-label="Cart" className="cursor-pointer">
