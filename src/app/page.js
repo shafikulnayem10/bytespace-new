@@ -6,6 +6,7 @@ import Courses from "@/components/sections/Courses";
 import LearningPaths from "@/components/sections/LearningPaths";
 import GrowthPaths from "@/components/sections/GrowthPaths";
 import CreatorCTA from "@/components/sections/CreatorCTA";
+import Testimonials from "@/components/sections/Testimonials";
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
         <LearningPaths></LearningPaths>
         <GrowthPaths></GrowthPaths>
         <CreatorCTA></CreatorCTA>
+        <Testimonials></Testimonials>
       </main>
     </>
   );
