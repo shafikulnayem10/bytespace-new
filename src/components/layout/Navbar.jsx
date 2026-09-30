@@ -77,7 +77,7 @@ export default function Navbar() {
               </li>
             ))}
             <li><Link href="/login" className="text-body-m">Sign In</Link></li>
-            <li><Link href="/register" className="text-body-m">Join Us</Link></li>
+            <li><Link href="/signup" className="text-body-m">Join Us</Link></li>
           </ul>
         </div>
       )}
