@@ -84,7 +84,7 @@ export default function Hero() {
           </div>
 
           {/* Learning Progress card */}
-          <div className="absolute right-0 top-0 w-[232px] h-[131px] rounded-xl bg-white p-3 text-left text-neutral-950 shadow-lg md:w-[210px] md:p-4">
+          <div className="absolute right-0 top-0 w-[200px] h-[131px] rounded-xl bg-white p-3 text-left text-neutral-950 shadow-lg md:w-[210px] md:p-4">
             <p className="text-body-xs text-neutral-500">Learning Progress</p>
             <p className="mt-1 font-heading text-[28px] font-semibold leading-none md:text-heading-s">
               55%
